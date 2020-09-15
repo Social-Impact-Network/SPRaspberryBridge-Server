@@ -1,0 +1,27 @@
+// For this you will need the VS Code extension 'REST Client'
+
+GET http://localhost:3000/devices
+
+###
+GET http://localhost:3000/devices/5f5fb0de6306722248074ff4
+
+###
+POST http://localhost:3000/devices
+Content-Type: application/json
+
+{
+    "name": "Raspberry Pi 7",
+    "location": "Lebanon",
+    "energyOutput": 8
+}
+
+###
+DELETE http://localhost:3000/devices/5f5faddf0e82b127b0ed89d3
+
+###
+PATCH http://localhost:3000/devices/5f5fb0de6306722248074ff4
+Content-Type: application/json
+
+{
+    "name": "Pi 9"
+}

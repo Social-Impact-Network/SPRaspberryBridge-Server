@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
         name: req.body.name,
         location:
         req.body.location,
-        "energyOutput": req.body.energyOutput
+        energyOutput: req.body.energyOutput
     });
 
     try {
@@ -45,7 +45,7 @@ router.patch('/:id', getDevice, async (req, res) => {
     try {
         const updatedDevice = await res.device.save();
         res.json(updatedDevice)
-    }  catch (err) {
+    } catch (err) {
         res.status(400).json({ message: err.message })
     }
 });

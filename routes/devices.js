@@ -34,11 +34,11 @@ router.post('/', async (req, res) => {
 });
 // Updating one
 router.patch('/:id', getDevice, async (req, res) => {
-    if (req.body.name) {
+    if (req.body.name != null) {
         res.device.name = req.body.name;
         
     }    
-    if (req.body.location) {
+    if (req.body.location != null) {
         res.device.name = req.body.energyOutput;
 
     }  

@@ -17,8 +17,6 @@ const deviceRouter = require('./routes/devices');
 app.use('/devices', deviceRouter);
 
 
-
-
 app.listen(3000, () => {
     console.log('Listening on 3000');
 });

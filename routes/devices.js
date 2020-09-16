@@ -25,6 +25,8 @@ router.post('/', async (req, res) => {
         energyOutput: req.body.energyOutput
     });
 
+    console.log(req.body);
+
     try {
         const newDevice = await device.save();
         res.status(201).json(newDevice);

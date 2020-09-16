@@ -3,6 +3,9 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 
+// write in a .env (same level as server.js, package.json and so on) 
+// file following (after = your Database URL without quotationmarks)
+// DATABASE_URL = 
 mongoose.connect(process.env.DATABASE_URL, 
     { 
         useNewUrlParser: true, 

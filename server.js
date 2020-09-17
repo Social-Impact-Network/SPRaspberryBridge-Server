@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const port = process.env.PORT || 3000;
 
 // write in a .env (same level as server.js, package.json and so on) 
 // file following (after = your Database URL without quotationmarks)
@@ -20,6 +21,6 @@ const deviceRouter = require('./routes/devices');
 app.use('/devices', deviceRouter);
 
 
-app.listen(3000, () => {
-    console.log('Listening on 3000');
+app.listen(port, () => {
+    console.log('Listening on '+ port);
 });

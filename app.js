@@ -4,9 +4,9 @@ const app = express();
 const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 
-// write in a .env (same level as server.js, package.json and so on) 
-// file following (after = your Database URL without quotationmarks)
-// DATABASE_URL = 
+// write in a .env-file (same level as server.js, package.json and so on) 
+// following:
+// DATABASE_URL=yourDatabaseURL
 mongoose.connect(process.env.DATABASE_URL, 
     { 
         useNewUrlParser: true, 

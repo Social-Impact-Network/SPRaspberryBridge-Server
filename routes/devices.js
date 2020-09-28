@@ -20,9 +20,9 @@ router.get('/:id', getDevice, (req, res) => {
 router.post('/', async (req, res) => {
     const device = new Device({
         name: req.body.name,
-        location:
-        req.body.location,
-        energyOutput: req.body.energyOutput
+        location: req.body.location,
+        energyOutput: req.body.energyOutput,
+        temperature: req.body.temperature
     });
 
     console.log(req.body);

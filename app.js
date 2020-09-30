@@ -4,6 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 const db = mongoose.connection;
+const deviceRouter = require('./routes/devices');
 
 // write in a .env-file (same level as server.js, package.json and so on) 
 // following:
@@ -17,7 +18,6 @@ db.on('error', (error) => console.error(error));
 db.once('open', () => console.log('Successfully connected to database'));
 app.use(express.json());
 
-const deviceRouter = require('./routes/devices');
 app.use('/devices', deviceRouter);
 
 

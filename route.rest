@@ -6,8 +6,12 @@ GET http://localhost:3000/devices
 GET http://localhost:3000/devices/5f5fb0de6306722248074ff4
 
 ###
+
+// make sure tp leave a blank line underneath
+// Conten-Type: application/json
+// or else you will get errors
 POST http://localhost:3000/devices
-Content-Type: application/json
+Content-Type: application/json 
 
 {
     "name": "Raspberry Pi 7",

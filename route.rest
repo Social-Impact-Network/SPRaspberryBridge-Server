@@ -1,5 +1,5 @@
 // For this you will need the VS Code extension 'REST Client'
-
+// Separate requests with tipple hashtags 
 GET http://localhost:3000/devices
 
 ###
